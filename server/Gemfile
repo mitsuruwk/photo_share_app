@@ -1,0 +1,21 @@
+source :rubygems
+
+gem 'sinatra'
+gem 'json'
+gem 'pusher'
+gem 'rack'
+gem 'thin'
+
+group :development do
+  gem 'sinatra-reloader'
+  gem 'haml'
+  gem 'sass'
+end
+
+
+
+
+
+
+
+

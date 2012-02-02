@@ -1,0 +1,57 @@
+#screen {
+    width: 300px;
+    // border: 1px dashed  blue;
+    overflow-x: hidden;
+    margin: 0 auto;
+
+    #photo_get_panel {
+        margin: 0 auto;
+        #get_photo_btn {
+            width: 294px;
+            margin: 3px;
+        }
+    }
+    
+    #photo_send_panel {
+        display: none;
+        width: 100%;
+        
+        #send_photo_image {
+            width: 300px;
+            margin: 3px;
+        }
+
+        #send_photo_message {
+            width: 280px;
+            margin: 3px;
+        }
+    }
+
+    #list {
+        width: 100%px;
+
+        .photo {
+            .image {
+                margin: 3px;
+                width: 300px;
+                //background-color: #ff0000;
+
+                .photo_image {
+                    width: 300px;
+                }
+            }
+
+            .text {
+                margin: 3px;
+                font-size: 15px;
+            }
+
+            .post-at {
+                margin: 3px;
+                font-size: 11px;
+                color: #999;
+            }
+        }
+    }
+}
+

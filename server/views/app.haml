@@ -1,0 +1,46 @@
+!!! 5
+%html
+  %head
+    %meta{:charset => 'utf-8'}
+    %title Photo Share
+    %link{:rel => "stylesheet",
+          :href => "https://ajax.googleapis.com/ajax/libs/yui/3/build/cssreset/reset-min.css"}
+    %link{:rel => "stylesheet", :href => "app.css"}
+
+    %script{:type => "text/template", :id => "photo-list-template"}
+      .photo
+        .image
+          %image.photo_image{:src => "{{json.image_data}}"} 
+        .text
+          {{json.message}}
+        .post-at
+          {{json.post_at}}
+
+  %body
+    %div#screen
+      %div#photo_get_panel
+        %button#get_photo_btn Photo Share     
+      %div#photo_send_panel
+        %div
+          %image#send_photo_image
+        %div
+          %input#send_photo_message{:type => "text", :placeholder => "message"}
+        %div
+          %button#send_photo_btn send
+          %button#cancel_photo_btn cancel
+      %div#list
+        .photo
+          .image
+            %image.photo_image{:src => "pusher.jpg"}
+          .text
+            Pusher | HTML5 WebSocket Powered Realtime Messaging Service
+          .post-at
+            2012-02-01 00:00:00 +0900
+    
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"}
+    %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.2/underscore-min.js"}
+    %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/require.js/1.0.1/require.min.js"}
+    %script{:src => "http://js.pusherapp.com/1.9/pusher.min.js"}
+    %script{:src => "porthole.min.js"}
+    %script{:src => "app.js"}
+
